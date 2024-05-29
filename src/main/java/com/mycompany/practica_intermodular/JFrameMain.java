@@ -140,6 +140,7 @@ public class JFrameMain extends javax.swing.JFrame {
         poSat4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Información sobre el Sistema Solar");
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(0, 0, 0));
         setPreferredSize(new java.awt.Dimension(1450, 560));
