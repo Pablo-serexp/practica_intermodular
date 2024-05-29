@@ -8,7 +8,7 @@
       <Color blue="0" green="0" red="0" type="rgb"/>
     </Property>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[960, 540]"/>
+      <Dimension value="[1450, 560]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -33,247 +33,777 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel7" min="-2" pref="125" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel12" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel11" max="32767" attributes="0"/>
-                          </Group>
+                      <EmptySpace pref="28" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jLabel5" alignment="0" pref="125" max="32767" attributes="0"/>
-                                  <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel8" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jLabel9" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jLabel10" alignment="1" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="jLabelTempSol" max="32767" attributes="0"/>
+                                      <Component id="jLabelDistATierra" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="jLabelCompSol" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jLabelTipoSol" min="-2" pref="133" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="compSol" max="32767" attributes="0"/>
+                                  <Component id="distATierra" pref="77" max="32767" attributes="0"/>
+                                  <Component id="radioSol" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="tempSol" max="32767" attributes="0"/>
+                                  <Component id="tipoSol" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelRadioSol" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane1" min="-2" pref="329" max="-2" attributes="0"/>
-                          <Component id="jScrollPane2" min="-2" pref="329" max="-2" attributes="0"/>
-                          <Component id="jLabel13" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="jLabel14" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                              <Component id="jComboBox1" min="-2" pref="170" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <EmptySpace type="unrelated" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="229" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="fotoSol" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="12" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="118" max="32767" attributes="0"/>
+              <Component id="jSeparator2" min="-2" pref="11" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="planetaSeleccionado1" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="seleccionPlaneta" min="-2" pref="170" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabelRadioPlaneta" min="-2" pref="149" max="-2" attributes="0"/>
+                                      <Component id="jLabelTipoPlaneta" min="-2" pref="149" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="radioPlaneta" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jLabelOrbitaPlaneta" max="32767" attributes="0"/>
+                                      <Component id="jLabelTempPlaneta" max="32767" attributes="0"/>
+                                      <Component id="jLabelNumSatPlaneta" alignment="0" pref="143" max="32767" attributes="0"/>
+                                      <Component id="jLabelDistASol" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                          <Component id="orbitaPlaneta" alignment="0" pref="155" max="32767" attributes="0"/>
+                                          <Component id="numSatPlaneta" pref="155" max="32767" attributes="0"/>
+                                          <Component id="distASol" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="tipoPlaneta" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Component id="tempPlaneta" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="nombreSat3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="nombreSat2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="nombreSat1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="nombreSat4" min="-2" pref="77" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="radioSat4" max="32767" attributes="0"/>
+                                  <Component id="radioSat" max="32767" attributes="0"/>
+                                  <Component id="radioSat1" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="radioSat3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="radioSat2" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="tempSat" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tempSat1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tempSat2" max="32767" attributes="0"/>
+                                  <Component id="tempSat3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tempSat4" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="distSat" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="distSat1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="distSat2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="distSat3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="distSat4" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="planetaSeleccionado2" alignment="1" min="-2" pref="87" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="cuerpoSat" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="cuerpoSat1" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
+                                      <Component id="cuerpoSat2" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
+                                      <Component id="cuerpoSat3" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
+                                      <Component id="cuerpoSat4" alignment="1" min="-2" pref="87" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="fechaSat4" min="-2" pref="135" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="fechaSat" alignment="1" pref="135" max="32767" attributes="0"/>
+                                          <Component id="fechaSat1" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="fechaSat2" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="fechaSat3" alignment="1" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="poSat" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="poSat1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="poSat2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="poSat3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="poSat4" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="fotoPlaneta" min="-2" pref="200" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Component id="satelitesPlaneta" min="-2" pref="221" max="-2" attributes="0"/>
+                  <Component id="jSeparator1" alignment="0" min="-2" pref="716" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="127" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="planetaSeleccionado1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace pref="14" max="32767" attributes="0"/>
+                              <Component id="seleccionPlaneta" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelTipoPlaneta" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tipoPlaneta" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelRadioPlaneta" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="radioPlaneta" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelTempPlaneta" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tempPlaneta" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabelDistASol" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="distASol" alignment="0" min="-2" pref="16" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelNumSatPlaneta" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="numSatPlaneta" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelOrbitaPlaneta" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="orbitaPlaneta" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="26" max="32767" attributes="0"/>
+                              <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="32767" attributes="0"/>
+                              <Component id="satelitesPlaneta" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                              <Component id="fotoPlaneta" min="-2" pref="200" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="fotoSol" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                              <Component id="tempSat" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="radioSat" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cuerpoSat" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="distSat" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="tempSat1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="tempSat2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                                      <Component id="tempSat3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="tempSat4" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="nombreSat1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="nombreSat2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="nombreSat3" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="nombreSat4" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="radioSat1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="radioSat2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="radioSat3" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="radioSat4" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                              <Component id="planetaSeleccionado2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="distSat1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="distSat2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="cuerpoSat1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="cuerpoSat2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="68" pref="68" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="distSat3" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="distSat4" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="cuerpoSat3" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="cuerpoSat4" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelTipoSol" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tipoSol" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelRadioSol" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radioSol" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelTempSol" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tempSol" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDistATierra" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="distATierra" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="compSol" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelCompSol" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" min="-2" pref="127" max="-2" attributes="0"/>
+                      <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="fechaSat" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="68" pref="68" max="-2" attributes="0"/>
+                                      <Component id="fechaSat3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="fechaSat1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="fechaSat2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="fechaSat4" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="poSat" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="68" pref="68" max="-2" attributes="0"/>
+                                      <Component id="poSat3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="poSat1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="poSat2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="poSat4" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="117" max="32767" attributes="0"/>
+              <EmptySpace pref="23" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jSeparator2" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="fotoSol">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/sol.jpg"/>
         </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[250, 250]"/>
-        </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="SOL"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="jLabelTipoSol">
       <Properties>
         <Property name="text" type="java.lang.String" value="TIPO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="jLabelRadioSol">
       <Properties>
         <Property name="text" type="java.lang.String" value="RADIO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="jLabelTempSol">
       <Properties>
         <Property name="text" type="java.lang.String" value="TEMPERATURA"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
+    <Component class="javax.swing.JLabel" name="jLabelDistATierra">
       <Properties>
         <Property name="text" type="java.lang.String" value="DISTANCIA A LA TIERRA"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel7">
+    <Component class="javax.swing.JLabel" name="jLabelCompSol">
       <Properties>
         <Property name="text" type="java.lang.String" value="COMPOSICI&#xd3;N"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel8">
+    <Component class="javax.swing.JLabel" name="tipoSol">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="jLabel8"/>
+        <Property name="text" type="java.lang.String" value="tipoSol"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel9">
+    <Component class="javax.swing.JLabel" name="radioSol">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="jLabel9"/>
+        <Property name="text" type="java.lang.String" value="radioSol"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel10">
+    <Component class="javax.swing.JLabel" name="tempSol">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="jLabel10"/>
+        <Property name="text" type="java.lang.String" value="tempSol"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel11">
+    <Component class="javax.swing.JLabel" name="distATierra">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="jLabel11"/>
+        <Property name="text" type="java.lang.String" value="distATierra"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel12">
+    <Component class="javax.swing.JLabel" name="compSol">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="jLabel12"/>
+        <Property name="text" type="java.lang.String" value="compSol"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox1">
+    <Component class="javax.swing.JComboBox" name="seleccionPlaneta">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="8">
+            <StringItem index="0" value="Mercurio"/>
+            <StringItem index="1" value="Venus"/>
+            <StringItem index="2" value="Tierra"/>
+            <StringItem index="3" value="Marte"/>
+            <StringItem index="4" value="J&#xfa;piter"/>
+            <StringItem index="5" value="Saturno"/>
+            <StringItem index="6" value="Urano"/>
+            <StringItem index="7" value="Neptuno"/>
           </StringArray>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seleccionPlanetaActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTable" name="jTable1">
-          <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="2" rowCount="0">
-                <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                <Column editable="true" title="Title 2" type="java.lang.Object"/>
-              </Table>
-            </Property>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTable" name="jTable2">
-          <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="2" rowCount="0">
-                <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                <Column editable="true" title="Title 2" type="java.lang.Object"/>
-              </Table>
-            </Property>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Component class="javax.swing.JLabel" name="jLabel13">
+    <Component class="javax.swing.JLabel" name="planetaSeleccionado1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel13"/>
+        <Property name="text" type="java.lang.String" value="PLANETA"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel14">
+    <Component class="javax.swing.JLabel" name="tempPlaneta">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel14"/>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="text" type="java.lang.String" value="tempPlaneta"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="distASol">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="text" type="java.lang.String" value="distASol"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="numSatPlaneta">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="text" type="java.lang.String" value="compPlaneta"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelTipoPlaneta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="TIPO"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelRadioPlaneta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="RADIO"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelTempPlaneta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="TEMPERATURA"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelDistASol">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="DISTANCIA AL SOL"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelNumSatPlaneta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="N&#xda;MERO DE SAT&#xc9;LITES"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tipoPlaneta">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="text" type="java.lang.String" value="tipoPlaneta"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="radioPlaneta">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="text" type="java.lang.String" value="radioPlaneta"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="radioSat2">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="radioSat2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="radioSat3">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="radioSat3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="radioSat4">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="radioSat4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="nombreSat1">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="nombreSat1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="nombreSat2">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="nombreSat2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="nombreSat3">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="nombreSat3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="nombreSat4">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="nombreSat4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="radioSat1">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="radioSat1"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="radioSat">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="RADIO (KM)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tempSat">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="TEMPERATURA (&#xba;C)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tempSat1">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="tempSat1"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tempSat2">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="tempSat2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tempSat3">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="tempSat3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tempSat4">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="tempSat4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="distSat">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="DISTANCIA A"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="distSat1">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="distSat1"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="distSat2">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="distSat2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="distSat3">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="distSat3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="distSat4">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="distSat4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="planetaSeleccionado2">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="PLANETA"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cuerpoSat">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="CUERPO"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cuerpoSat1">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="cuerpoSat1"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cuerpoSat2">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="cuerpoSat2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cuerpoSat3">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="cuerpoSat3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cuerpoSat4">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="cuerpoSat4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="fechaSat">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="FECHA CREACI&#xd3;N"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="fechaSat1">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="fechaSat1"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="fechaSat2">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="fechaSat2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="fechaSat3">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="fechaSat3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="fechaSat4">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="fechaSat4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="fotoPlaneta">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Mercurio.jpg"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="FOTOPLANETA"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelOrbitaPlaneta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="PERIODO ORBITAL"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="orbitaPlaneta">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="text" type="java.lang.String" value="orbitaPlaneta"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="satelitesPlaneta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="SAT&#xc9;LITES"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="jSeparator1">
+    </Component>
+    <Component class="javax.swing.JSeparator" name="jSeparator2">
+      <Properties>
+        <Property name="orientation" type="int" value="1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="poSat">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="PERIODO ORBITAL (KM)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="poSat1">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="poSat1"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="poSat2">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="poSat2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="poSat3">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="poSat3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="poSat4">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="poSat4"/>
       </Properties>
     </Component>
   </SubComponents>

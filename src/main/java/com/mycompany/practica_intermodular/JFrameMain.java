@@ -4,9 +4,13 @@
  */
 package com.mycompany.practica_intermodular;
 
+import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
- * @author Usuario
+ * @author Pablo Serrano Expósito
  */
 public class JFrameMain extends javax.swing.JFrame {
 
@@ -15,9 +19,50 @@ public class JFrameMain extends javax.swing.JFrame {
      */
     public JFrameMain() {
         initComponents();
+
+        // Cambiar datos del sol
+        String datosSol[] = conexion.devolverDatosSol();
+
+        tipoSol.setText(datosSol[0]);
+        radioSol.setText(datosSol[1] + " KM");
+        tempSol.setText(datosSol[2] + "ºC");
+        distATierra.setText(datosSol[3] + "M KM");
+        compSol.setText(datosSol[4]);
         
+        // Obtener los datos de mercurio (Planeta predeterminado)
+        String datosMercurio[] = conexion.devolverDatosPlaneta("Mercurio");
+        tipoPlaneta.setText(datosMercurio[6]);
+        radioPlaneta.setText(datosMercurio[2] + "KM");
+        tempPlaneta.setText(datosMercurio[5] + "ºC");
+        distASol.setText(datosMercurio[3] + "KM");
+        numSatPlaneta.setText(datosMercurio[7]);
+        orbitaPlaneta.setText(datosMercurio[4] + " días");
         
+        // Lista de etiquetas de los datos de los satélites
+        JLabel etiquetasSatelites[][] = {
+            {nombreSat1, radioSat1, tempSat1, distSat1, cuerpoSat1, fechaSat1, poSat1},
+            {nombreSat2, radioSat2, tempSat2, distSat2, cuerpoSat2, fechaSat2, poSat2},
+            {nombreSat3, radioSat3, tempSat3, distSat3, cuerpoSat3, fechaSat3, poSat3},
+            {nombreSat4, radioSat4, tempSat4, distSat4, cuerpoSat4, fechaSat4, poSat4}
+        };
         
+        // Crear un array de etiquetas titulares para los satélites
+        JLabel etiquetasTituloSatelites[] = {radioSat, tempSat, distSat, cuerpoSat, fechaSat, poSat};
+        
+        // No se muestran ningunas etiquetas ya que mercurio no tiene satélites
+            satelitesPlaneta.setText("El planeta Mercurio no tiene satélites.");
+            planetaSeleccionado2.setVisible(false);
+
+            // Etiquetas titulo
+            for (int i = 0; i < etiquetasTituloSatelites.length; i++) {
+                etiquetasTituloSatelites[i].setVisible(false);
+            }
+            // Etiquetas con datos
+            for (int i = 0; i < etiquetasSatelites.length; i++) {
+                for (int j = 0; j < etiquetasSatelites[i].length; j++) {
+                    etiquetasSatelites[i][j].setVisible(false);
+                }
+            }
     }
 
     /**
@@ -29,94 +74,262 @@ public class JFrameMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        fotoSol = new javax.swing.JLabel();
+        jLabelTipoSol = new javax.swing.JLabel();
+        jLabelRadioSol = new javax.swing.JLabel();
+        jLabelTempSol = new javax.swing.JLabel();
+        jLabelDistATierra = new javax.swing.JLabel();
+        jLabelCompSol = new javax.swing.JLabel();
+        tipoSol = new javax.swing.JLabel();
+        radioSol = new javax.swing.JLabel();
+        tempSol = new javax.swing.JLabel();
+        distATierra = new javax.swing.JLabel();
+        compSol = new javax.swing.JLabel();
+        seleccionPlaneta = new javax.swing.JComboBox<>();
+        planetaSeleccionado1 = new javax.swing.JLabel();
+        tempPlaneta = new javax.swing.JLabel();
+        distASol = new javax.swing.JLabel();
+        numSatPlaneta = new javax.swing.JLabel();
+        jLabelTipoPlaneta = new javax.swing.JLabel();
+        jLabelRadioPlaneta = new javax.swing.JLabel();
+        jLabelTempPlaneta = new javax.swing.JLabel();
+        jLabelDistASol = new javax.swing.JLabel();
+        jLabelNumSatPlaneta = new javax.swing.JLabel();
+        tipoPlaneta = new javax.swing.JLabel();
+        radioPlaneta = new javax.swing.JLabel();
+        radioSat2 = new javax.swing.JLabel();
+        radioSat3 = new javax.swing.JLabel();
+        radioSat4 = new javax.swing.JLabel();
+        nombreSat1 = new javax.swing.JLabel();
+        nombreSat2 = new javax.swing.JLabel();
+        nombreSat3 = new javax.swing.JLabel();
+        nombreSat4 = new javax.swing.JLabel();
+        radioSat1 = new javax.swing.JLabel();
+        radioSat = new javax.swing.JLabel();
+        tempSat = new javax.swing.JLabel();
+        tempSat1 = new javax.swing.JLabel();
+        tempSat2 = new javax.swing.JLabel();
+        tempSat3 = new javax.swing.JLabel();
+        tempSat4 = new javax.swing.JLabel();
+        distSat = new javax.swing.JLabel();
+        distSat1 = new javax.swing.JLabel();
+        distSat2 = new javax.swing.JLabel();
+        distSat3 = new javax.swing.JLabel();
+        distSat4 = new javax.swing.JLabel();
+        planetaSeleccionado2 = new javax.swing.JLabel();
+        cuerpoSat = new javax.swing.JLabel();
+        cuerpoSat1 = new javax.swing.JLabel();
+        cuerpoSat2 = new javax.swing.JLabel();
+        cuerpoSat3 = new javax.swing.JLabel();
+        cuerpoSat4 = new javax.swing.JLabel();
+        fechaSat = new javax.swing.JLabel();
+        fechaSat1 = new javax.swing.JLabel();
+        fechaSat2 = new javax.swing.JLabel();
+        fechaSat3 = new javax.swing.JLabel();
+        fechaSat4 = new javax.swing.JLabel();
+        fotoPlaneta = new javax.swing.JLabel();
+        jLabelOrbitaPlaneta = new javax.swing.JLabel();
+        orbitaPlaneta = new javax.swing.JLabel();
+        satelitesPlaneta = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        poSat = new javax.swing.JLabel();
+        poSat1 = new javax.swing.JLabel();
+        poSat2 = new javax.swing.JLabel();
+        poSat3 = new javax.swing.JLabel();
+        poSat4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(0, 0, 0));
-        setPreferredSize(new java.awt.Dimension(960, 540));
+        setPreferredSize(new java.awt.Dimension(1450, 560));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sol.jpg"))); // NOI18N
-        jLabel1.setPreferredSize(new java.awt.Dimension(250, 250));
+        fotoSol.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sol.jpg"))); // NOI18N
 
-        jLabel2.setText("SOL");
+        jLabelTipoSol.setText("TIPO");
 
-        jLabel3.setText("TIPO");
+        jLabelRadioSol.setText("RADIO");
 
-        jLabel4.setText("RADIO");
+        jLabelTempSol.setText("TEMPERATURA");
 
-        jLabel5.setText("TEMPERATURA");
+        jLabelDistATierra.setText("DISTANCIA A LA TIERRA");
 
-        jLabel6.setText("DISTANCIA A LA TIERRA");
+        jLabelCompSol.setText("COMPOSICIÓN");
 
-        jLabel7.setText("COMPOSICIÓN");
+        tipoSol.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        tipoSol.setText("tipoSol");
+        tipoSol.setToolTipText("");
 
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel8.setText("jLabel8");
-        jLabel8.setToolTipText("");
+        radioSol.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        radioSol.setText("radioSol");
 
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel9.setText("jLabel9");
+        tempSol.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        tempSol.setText("tempSol");
 
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel10.setText("jLabel10");
+        distATierra.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        distATierra.setText("distATierra");
 
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel11.setText("jLabel11");
+        compSol.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        compSol.setText("compSol");
 
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel12.setText("jLabel12");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.setToolTipText("");
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        seleccionPlaneta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mercurio", "Venus", "Tierra", "Marte", "Júpiter", "Saturno", "Urano", "Neptuno" }));
+        seleccionPlaneta.setToolTipText("");
+        seleccionPlaneta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                seleccionPlanetaActionPerformed(evt);
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+        planetaSeleccionado1.setText("PLANETA");
 
-            },
-            new String [] {
-                "Title 1", "Title 2"
-            }
-        ));
-        jTable1.setToolTipText("");
-        jScrollPane1.setViewportView(jTable1);
+        tempPlaneta.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        tempPlaneta.setText("tempPlaneta");
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+        distASol.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        distASol.setText("distASol");
 
-            },
-            new String [] {
-                "Title 1", "Title 2"
-            }
-        ));
-        jScrollPane2.setViewportView(jTable2);
+        numSatPlaneta.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        numSatPlaneta.setText("compPlaneta");
 
-        jLabel13.setText("jLabel13");
+        jLabelTipoPlaneta.setText("TIPO");
 
-        jLabel14.setText("jLabel14");
+        jLabelRadioPlaneta.setText("RADIO");
+
+        jLabelTempPlaneta.setText("TEMPERATURA");
+
+        jLabelDistASol.setText("DISTANCIA AL SOL");
+
+        jLabelNumSatPlaneta.setText("NÚMERO DE SATÉLITES");
+
+        tipoPlaneta.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        tipoPlaneta.setText("tipoPlaneta");
+        tipoPlaneta.setToolTipText("");
+
+        radioPlaneta.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        radioPlaneta.setText("radioPlaneta");
+
+        radioSat2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        radioSat2.setText("radioSat2");
+
+        radioSat3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        radioSat3.setText("radioSat3");
+
+        radioSat4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        radioSat4.setText("radioSat4");
+
+        nombreSat1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nombreSat1.setText("nombreSat1");
+
+        nombreSat2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nombreSat2.setText("nombreSat2");
+
+        nombreSat3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nombreSat3.setText("nombreSat3");
+
+        nombreSat4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nombreSat4.setText("nombreSat4");
+
+        radioSat1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        radioSat1.setText("radioSat1");
+        radioSat1.setToolTipText("");
+
+        radioSat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        radioSat.setText("RADIO (KM)");
+
+        tempSat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tempSat.setText("TEMPERATURA (ºC)");
+
+        tempSat1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tempSat1.setText("tempSat1");
+        tempSat1.setToolTipText("");
+
+        tempSat2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tempSat2.setText("tempSat2");
+
+        tempSat3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tempSat3.setText("tempSat3");
+
+        tempSat4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tempSat4.setText("tempSat4");
+
+        distSat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        distSat.setText("DISTANCIA A");
+
+        distSat1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        distSat1.setText("distSat1");
+        distSat1.setToolTipText("");
+
+        distSat2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        distSat2.setText("distSat2");
+
+        distSat3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        distSat3.setText("distSat3");
+
+        distSat4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        distSat4.setText("distSat4");
+
+        planetaSeleccionado2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        planetaSeleccionado2.setText("PLANETA");
+
+        cuerpoSat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cuerpoSat.setText("CUERPO");
+
+        cuerpoSat1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cuerpoSat1.setText("cuerpoSat1");
+        cuerpoSat1.setToolTipText("");
+
+        cuerpoSat2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cuerpoSat2.setText("cuerpoSat2");
+
+        cuerpoSat3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cuerpoSat3.setText("cuerpoSat3");
+
+        cuerpoSat4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cuerpoSat4.setText("cuerpoSat4");
+
+        fechaSat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fechaSat.setText("FECHA CREACIÓN");
+        fechaSat.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        fechaSat1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fechaSat1.setText("fechaSat1");
+        fechaSat1.setToolTipText("");
+
+        fechaSat2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fechaSat2.setText("fechaSat2");
+
+        fechaSat3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fechaSat3.setText("fechaSat3");
+
+        fechaSat4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fechaSat4.setText("fechaSat4");
+
+        fotoPlaneta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Mercurio.jpg"))); // NOI18N
+        fotoPlaneta.setText("FOTOPLANETA");
+
+        jLabelOrbitaPlaneta.setText("PERIODO ORBITAL");
+
+        orbitaPlaneta.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        orbitaPlaneta.setText("orbitaPlaneta");
+
+        satelitesPlaneta.setText("SATÉLITES");
+
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        poSat.setText("PERIODO ORBITAL (KM)");
+
+        poSat1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        poSat1.setText("poSat1");
+        poSat1.setToolTipText("");
+
+        poSat2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        poSat2.setText("poSat2");
+
+        poSat3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        poSat3.setText("poSat3");
+
+        poSat4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        poSat4.setText("poSat4");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -125,90 +338,387 @@ public class JFrameMain extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(28, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jLabelTempSol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabelDistATierra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabelCompSol, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabelTipoSol, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(compSol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(distATierra, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                                    .addComponent(radioSol, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tempSol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tipoSol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jLabelRadioSol, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(fotoSol)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)))
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(planetaSeleccionado1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(seleccionPlaneta, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabelRadioPlaneta, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabelTipoPlaneta, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(radioPlaneta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabelOrbitaPlaneta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabelTempPlaneta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabelNumSatPlaneta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+                                        .addComponent(jLabelDistASol, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGap(12, 12, 12)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(orbitaPlaneta, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                                            .addComponent(numSatPlaneta, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                                            .addComponent(distASol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(tipoPlaneta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(tempPlaneta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(143, 143, 143)
+                                    .addComponent(nombreSat3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(nombreSat2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(nombreSat1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(nombreSat4, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(radioSat4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(radioSat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(radioSat1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(radioSat3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(radioSat2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tempSat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tempSat1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tempSat2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tempSat3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tempSat4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(distSat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(distSat1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(distSat2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(distSat3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(distSat4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(planetaSeleccionado2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(73, 73, 73)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(229, 229, 229)
-                        .addComponent(jLabel2)))
-                .addContainerGap(118, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cuerpoSat, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(cuerpoSat1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cuerpoSat2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cuerpoSat3, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cuerpoSat4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(fechaSat4, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(20, 20, 20)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(fechaSat, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
+                                            .addComponent(fechaSat1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(fechaSat2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(fechaSat3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(poSat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(poSat1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(poSat2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(poSat3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(poSat4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(55, 55, 55)
+                                .addComponent(fotoPlaneta, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(satelitesPlaneta, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 716, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(planetaSeleccionado1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap(14, Short.MAX_VALUE)
+                                .addComponent(seleccionPlaneta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabelTipoPlaneta)
+                                    .addComponent(tipoPlaneta))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabelRadioPlaneta)
+                                    .addComponent(radioPlaneta, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabelTempPlaneta)
+                                    .addComponent(tempPlaneta))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabelDistASol)
+                                    .addComponent(distASol, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabelNumSatPlaneta)
+                                    .addComponent(numSatPlaneta))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabelOrbitaPlaneta)
+                                    .addComponent(orbitaPlaneta))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, Short.MAX_VALUE)
+                                .addComponent(satelitesPlaneta)
+                                .addGap(18, 18, 18))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(7, 7, 7)
+                                .addComponent(fotoPlaneta, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(fotoSol)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(tempSat)
+                                .addComponent(radioSat)
+                                .addComponent(cuerpoSat))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(distSat)
+                                .addGap(8, 8, 8)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(tempSat1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(tempSat2))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(68, 68, 68)
+                                        .addComponent(tempSat3)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(tempSat4))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(nombreSat1)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(nombreSat2)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(nombreSat3)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(nombreSat4))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(radioSat1)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(radioSat2)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(radioSat3)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(radioSat4)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(planetaSeleccionado2)
+                                .addGap(14, 14, 14)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(distSat1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(distSat2))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(cuerpoSat1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(cuerpoSat2))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(68, 68, 68)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(distSat3)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(distSat4))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(cuerpoSat3)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(cuerpoSat4)))))))
+                        .addGap(16, 16, 16))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelTipoSol)
+                            .addComponent(tipoSol))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel13)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelRadioSol)
+                            .addComponent(radioSol))
                         .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelTempSol)
+                            .addComponent(tempSol))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelDistATierra)
+                            .addComponent(distATierra))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(compSol)
+                            .addComponent(jLabelCompSol)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel8))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel9))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel10))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel11))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel7)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel14)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(117, Short.MAX_VALUE))
+                        .addGap(8, 8, 8)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(fechaSat)
+                                .addGap(34, 34, 34)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(68, 68, 68)
+                                        .addComponent(fechaSat3))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(fechaSat1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(fechaSat2)))
+                                .addGap(18, 18, 18)
+                                .addComponent(fechaSat4))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(poSat)
+                                .addGap(34, 34, 34)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(68, 68, 68)
+                                        .addComponent(poSat3))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(poSat1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(poSat2)))
+                                .addGap(18, 18, 18)
+                                .addComponent(poSat4)))))
+                .addContainerGap(23, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator2)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    /**
+     * 
+     * @param evt 
+     */
+    private void seleccionPlanetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionPlanetaActionPerformed
+        // Obetener el nombre del planeta seleccionado
+        String nombrePlanetaSeleccionado = (String) seleccionPlaneta.getSelectedItem();
+
+        // Crear una variable para la foto del planeta
+        String archivoFoto = nombrePlanetaSeleccionado + ".jpg";
+        ImageIcon iconoPlaneta = new ImageIcon(getClass().getResource("/" + archivoFoto));
+        
+        // Cambiar las etiquetas que muestran el planeta y la foto
+        fotoPlaneta.setIcon(iconoPlaneta);
+        planetaSeleccionado1.setText(nombrePlanetaSeleccionado.toUpperCase());
+        planetaSeleccionado2.setText(nombrePlanetaSeleccionado.toUpperCase() + " (KM)");
+
+        // Cambiar los datos del planeta
+        String datosPlaneta[] = conexion.devolverDatosPlaneta(nombrePlanetaSeleccionado);
+        tipoPlaneta.setText(datosPlaneta[6]);
+        radioPlaneta.setText(datosPlaneta[2] + "KM");
+        tempPlaneta.setText(datosPlaneta[5] + "ºC");
+        distASol.setText(datosPlaneta[3] + "KM");
+        numSatPlaneta.setText(datosPlaneta[7]);
+        orbitaPlaneta.setText(datosPlaneta[4] + " días");
+
+        // Crear un array de etiquetas titulares para los satélites
+        JLabel etiquetasTituloSatelites[] = {radioSat, tempSat, distSat, cuerpoSat, fechaSat, poSat};
+
+        // Crear variables para las etiquetas de los datos de los satélites
+        JLabel etiquetasSatelites[][] = {
+            {nombreSat1, radioSat1, tempSat1, distSat1, cuerpoSat1, fechaSat1, poSat1},
+            {nombreSat2, radioSat2, tempSat2, distSat2, cuerpoSat2, fechaSat2, poSat2},
+            {nombreSat3, radioSat3, tempSat3, distSat3, cuerpoSat3, fechaSat3, poSat3},
+            {nombreSat4, radioSat4, tempSat4, distSat4, cuerpoSat4, fechaSat4, poSat4}
+        };
+
+        // Comprobar el número de satélites que tiene el planeta y mostrarlos
+        int numeroSatelites = Integer.parseInt(datosPlaneta[7]);
+
+        // Si no tiene, mostrar en la etiqueta de satélites que no hay
+        if (numeroSatelites == 0) {
+            // No se muestran ningunas etiquetas
+            satelitesPlaneta.setText("El planeta " + nombrePlanetaSeleccionado + " no tiene satélites.");
+            planetaSeleccionado2.setVisible(false);
+
+            // Etiquetas titulo
+            for (int i = 0; i < etiquetasTituloSatelites.length; i++) {
+                etiquetasTituloSatelites[i].setVisible(false);
+            }
+            // Etiquetas con datos
+            for (int i = 0; i < etiquetasSatelites.length; i++) {
+                for (int j = 0; j < etiquetasSatelites[i].length; j++) {
+                    etiquetasSatelites[i][j].setVisible(false);
+                }
+            }
+        }
+        // Si tiene, obtener los valores de la base de datos y cambiar el texto de las etiquetas
+        else {
+            // Obtener los datos de los satélites
+            ArrayList<String> datosSatelite = conexion.devolverDatosSatelite(datosPlaneta[0]);
+            satelitesPlaneta.setText("Satélites de " + nombrePlanetaSeleccionado);
+            planetaSeleccionado2.setVisible(true);
+
+            // Etiquetas titulo
+            for (int i = 0; i < etiquetasTituloSatelites.length; i++) {
+                etiquetasTituloSatelites[i].setVisible(true);
+            }
+            
+            int contador = 0;
+            // Etiquetas con datos
+            for (int i = 0; i < etiquetasSatelites.length; i++) {
+                for (int j = 0; j < etiquetasSatelites[i].length; j++) {
+                    etiquetasSatelites[i][j].setVisible(true);
+                    if (contador < datosSatelite.size()) {
+                            etiquetasSatelites[i][j].setText(datosSatelite.get(contador));
+                        contador++;
+                    }
+                }
+            }
+            
+            // No mostrar el resto de etiquetas para satélites
+            for (int i = etiquetasSatelites.length-1; i > numeroSatelites-1; i--) {
+                for (int j = 0; j < etiquetasSatelites[i].length; j++) {
+                    etiquetasSatelites[i][j].setVisible(false);
+                }
+            }
+        }
+
+
+    }//GEN-LAST:event_seleccionPlanetaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,30 +751,76 @@ public class JFrameMain extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new JFrameMain().setVisible(true);
-                
+
             }
         });
     }
 
+    Conexionbbdd conexion = new Conexionbbdd();
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JLabel compSol;
+    private javax.swing.JLabel cuerpoSat;
+    private javax.swing.JLabel cuerpoSat1;
+    private javax.swing.JLabel cuerpoSat2;
+    private javax.swing.JLabel cuerpoSat3;
+    private javax.swing.JLabel cuerpoSat4;
+    private javax.swing.JLabel distASol;
+    private javax.swing.JLabel distATierra;
+    private javax.swing.JLabel distSat;
+    private javax.swing.JLabel distSat1;
+    private javax.swing.JLabel distSat2;
+    private javax.swing.JLabel distSat3;
+    private javax.swing.JLabel distSat4;
+    private javax.swing.JLabel fechaSat;
+    private javax.swing.JLabel fechaSat1;
+    private javax.swing.JLabel fechaSat2;
+    private javax.swing.JLabel fechaSat3;
+    private javax.swing.JLabel fechaSat4;
+    private javax.swing.JLabel fotoPlaneta;
+    private javax.swing.JLabel fotoSol;
+    private javax.swing.JLabel jLabelCompSol;
+    private javax.swing.JLabel jLabelDistASol;
+    private javax.swing.JLabel jLabelDistATierra;
+    private javax.swing.JLabel jLabelNumSatPlaneta;
+    private javax.swing.JLabel jLabelOrbitaPlaneta;
+    private javax.swing.JLabel jLabelRadioPlaneta;
+    private javax.swing.JLabel jLabelRadioSol;
+    private javax.swing.JLabel jLabelTempPlaneta;
+    private javax.swing.JLabel jLabelTempSol;
+    private javax.swing.JLabel jLabelTipoPlaneta;
+    private javax.swing.JLabel jLabelTipoSol;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JLabel nombreSat1;
+    private javax.swing.JLabel nombreSat2;
+    private javax.swing.JLabel nombreSat3;
+    private javax.swing.JLabel nombreSat4;
+    private javax.swing.JLabel numSatPlaneta;
+    private javax.swing.JLabel orbitaPlaneta;
+    private javax.swing.JLabel planetaSeleccionado1;
+    private javax.swing.JLabel planetaSeleccionado2;
+    private javax.swing.JLabel poSat;
+    private javax.swing.JLabel poSat1;
+    private javax.swing.JLabel poSat2;
+    private javax.swing.JLabel poSat3;
+    private javax.swing.JLabel poSat4;
+    private javax.swing.JLabel radioPlaneta;
+    private javax.swing.JLabel radioSat;
+    private javax.swing.JLabel radioSat1;
+    private javax.swing.JLabel radioSat2;
+    private javax.swing.JLabel radioSat3;
+    private javax.swing.JLabel radioSat4;
+    private javax.swing.JLabel radioSol;
+    private javax.swing.JLabel satelitesPlaneta;
+    private javax.swing.JComboBox<String> seleccionPlaneta;
+    private javax.swing.JLabel tempPlaneta;
+    private javax.swing.JLabel tempSat;
+    private javax.swing.JLabel tempSat1;
+    private javax.swing.JLabel tempSat2;
+    private javax.swing.JLabel tempSat3;
+    private javax.swing.JLabel tempSat4;
+    private javax.swing.JLabel tempSol;
+    private javax.swing.JLabel tipoPlaneta;
+    private javax.swing.JLabel tipoSol;
     // End of variables declaration//GEN-END:variables
 }
