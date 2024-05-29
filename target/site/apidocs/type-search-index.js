@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.mycompany.practica_intermodular","l":"Conexionbbdd"},{"p":"com.mycompany.practica_intermodular","l":"JFrameMain"}];updateSearchResults();

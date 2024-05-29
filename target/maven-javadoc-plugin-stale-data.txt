@@ -1,0 +1,49 @@
+@options
+@packages
+-classpath
+'C:/Users/Pablo SE/.m2/repository/Mysql/Mysql/8.4.0/Mysql-8.4.0.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'20'
+-sourcepath
+'C:/Users/Pablo SE/Documents/NetBeansProjects/practica_intermodular/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Pablo SE/Documents/NetBeansProjects/practica_intermodular/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'practica_intermodular 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'practica_intermodular 1.0-SNAPSHOT API'
+com.mycompany.practica_intermodular
+C:\Users\Pablo SE\.m2\repository\Mysql\Mysql\8.4.0\Mysql-8.4.0.jar = 1710287010000
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\src\main\java = 1717005627496
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\allclasses-index.html = 1717005651462
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\allpackages-index.html = 1717005651466
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\copy.svg = 1717005651496
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\element-list = 1717005651365
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\help-doc.html = 1717005651489
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\index-all.html = 1717005651479
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\index.html = 1717005651483
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\link.svg = 1717005651498
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\member-search-index.js = 1717005651472
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\module-search-index.js = 1717005651467
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\overview-tree.html = 1717005651451
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\package-search-index.js = 1717005651469
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\script.js = 1717005651494
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\search-page.js = 1717005651504
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\search.html = 1717005651481
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\search.js = 1717005651501
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\serialized-form.html = 1717005651431
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\stylesheet.css = 1717005651492
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\tag-search-index.js = 1717005651473
+C:\Users\Pablo SE\Documents\NetBeansProjects\practica_intermodular\target\site\apidocs\type-search-index.js = 1717005651470
