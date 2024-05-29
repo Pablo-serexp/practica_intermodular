@@ -14,20 +14,25 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Usuario
+ * @author Pablo Serrano Expósito
  */
 public class Conexionbbdd {
-
+        
         // Configuración de la conexión a la base de datos MySQL
         String url = "jdbc:mysql://localhost:3306/practica_intermodular";
         String usuario = "root";
         String contraseña = "Med@c";
         
-        // Sentencia SQL planetas, Sol y satélites
+        // Sentencias SQL para planetas, Sol y satélites
         String queryPlaneta = "SELECT * FROM Planetas WHERE nombre = ?";
         String querySol = "SELECT * FROM Estrellas WHERE nombre = 'Sol'";
         String querySatelites = "SELECT * FROM Satelites WHERE id_planeta = ?";
 
+        /**
+         * 
+         * @param nombrePlaneta
+         * @return datosPlaneta[]
+         */
         // Método para conectarse a la BBDD y obtener los datos de los planetas
         public String[] devolverDatosPlaneta(String nombrePlaneta) {
             // Crear una variable donde guardar los datos
@@ -67,6 +72,10 @@ public class Conexionbbdd {
             return datosPlaneta;
         }
         
+        /**
+         * 
+         * @return datosSol[]
+         */
         // Método para conectarse a la BBDD y obtener los datos del Sol
         public String[] devolverDatosSol() {
             // Crear una variable donde guardar los datos
@@ -97,14 +106,20 @@ public class Conexionbbdd {
 
             } catch (SQLException e) {
                 e.printStackTrace();
-            }  
+            }
+            // Devolver los datos
             return datosSol;
         }
         
+        /**
+         * 
+         * @param nombrePlaneta
+         * @return datosSatelite[]
+         */
         // Método para conectarse a la BBDD y obtener los datos de los satelites
         public ArrayList<String> devolverDatosSatelite(String nombrePlaneta) {
             // Crear una variable donde guardar los datos
-            ArrayList<String> datosSatelite = new ArrayList<String>();
+            ArrayList<String> datosSatelites = new ArrayList<String>();
 
             try {
                 // Establecer conexión con la base de datos
@@ -119,17 +134,14 @@ public class Conexionbbdd {
 
                 // Iterar sobre los resultados y mostrarlos por consola
                 while (resultados.next()) {
-                    datosSatelite.add(resultados.getString("nombre"));
-                    datosSatelite.add(resultados.getString("radio"));
-                    datosSatelite.add(resultados.getString("temperatura_media"));
-                    datosSatelite.add(resultados.getString("distancia_media_planeta"));
-                    datosSatelite.add(resultados.getString("tipo_cuerpo"));
-                    datosSatelite.add(resultados.getString("fecha_creacion"));
-                    datosSatelite.add(resultados.getString("periodo_orbital"));
+                    datosSatelites.add(resultados.getString("nombre"));
+                    datosSatelites.add(resultados.getString("radio"));
+                    datosSatelites.add(resultados.getString("temperatura_media"));
+                    datosSatelites.add(resultados.getString("distancia_media_planeta"));
+                    datosSatelites.add(resultados.getString("tipo_cuerpo"));
+                    datosSatelites.add(resultados.getString("fecha_creacion"));
+                    datosSatelites.add(resultados.getString("periodo_orbital"));
                 }
-                
-                // Hay que borrar el úlitmo registro nulo que devuelve SQL
-                datosSatelite.remove(datosSatelite.size() - (datosSatelite.size()/7));
                 
                 // Cerrar recursos
                 prepStatement.close();
@@ -137,8 +149,9 @@ public class Conexionbbdd {
 
             } catch (SQLException e) {
                 e.printStackTrace();
-            }  
-            return datosSatelite;
+            }
+            // Devolver los datos
+            return datosSatelites;
         }
 }
 
